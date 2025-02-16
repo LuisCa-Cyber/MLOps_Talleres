@@ -53,6 +53,7 @@ docker compose up -d
 
 ## 📁 Estructura del Proyecto
 
+```
 Taller_2_V2/
 ├── docker-compose.yaml
 ├── data/
@@ -68,7 +69,7 @@ Taller_2_V2/
     ├── pyproject.toml
     ├── uv.lock
     ├── main.py
-
+```
 
 
 

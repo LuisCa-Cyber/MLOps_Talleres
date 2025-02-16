@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  jupyterlab:
+    build: ./jupyterlab
+    container_name: jupyterlab_service
+    ports:
+      - "8080:8888"  # Accedes a JupyterLab en http://localhost:8080
+    volumes:
+      - models_volume:/home/app/models
+      - ./data:/home/app/data  # Monta la carpeta de datos en el contenedor
+
+  fastapi:
+    build: ./fastapi
+    container_name: fastapi_service
+    ports:
+      - "8081:8000"  # Accedes a FastAPI en http://localhost:8081
+    volumes:
+      - models_volume:/home/app/models
+
+volumes:
+  models_volume:

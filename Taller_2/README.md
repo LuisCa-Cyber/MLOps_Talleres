@@ -54,7 +54,7 @@ docker compose up -d
 ## 📁 Estructura del Proyecto
 
 ```
-Taller_2_V2/
+Taller_2
 ├── docker-compose.yaml
 ├── data/
 │   ├── penguins_lter.csv
@@ -63,12 +63,12 @@ Taller_2_V2/
 │   ├── Dockerfile
 │   ├── pyproject.toml
 │   ├── uv.lock
-│   ├── train.py
+│   └── train.py
 └── fastapi/
     ├── Dockerfile
     ├── pyproject.toml
     ├── uv.lock
-    ├── main.py
+    └── main.py
 ```
 
 

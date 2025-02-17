@@ -1,4 +1,4 @@
-# 🐳 Docker ML Training & Inference Pipeline
+# 🐳 Pipeline de Entrenamiento e Inferencia en ML con Docker
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/Docker-24.0+-blue.svg)](https://www.docker.com/)
 [![uv](https://img.shields.io/badge/uv-package%20installer-purple.svg)](https://github.com/astral-sh/uv)
 
-Este proyecto implementa una arquitectura containerizada para el entrenamiento de modelos de Machine Learning y su posterior despliegue para inferencias, utilizando volúmenes compartidos de Docker.
+Este proyecto implementa un entorno containerizado para entrenar modelos de Machine Learning y desplegar una API de inferencia. Se integra uv para la gestión rápida de dependencias y se usan volúmenes compartidos en Docker para que los modelos entrenados en JupyterLab sean accesibles por la API FastAPI.
 
 ## 🏗️ Arquitectura
 
@@ -17,17 +17,17 @@ El proyecto consta de dos servicios principales:
 
 Los modelos entrenados se comparten entre contenedores mediante un volumen Docker.
 
-mermaid
+```
 graph LR
-A[JupyterLab] -->|Entrena & Guarda| B[Volumen Compartido]
-B -->|Carga Modelos| C[FastAPI]
-D[Cliente] -->|Solicitud| C
-
+  A[JupyterLab] -->|Entrena y guarda modelos| B[Volumen Compartido]
+  B -->|Carga modelos| C[FastAPI]
+  D[Cliente] -->|Solicita inferencia| C
+```
 
 ## ✨ Características
 
 - 🔄 Sincronización automática de modelos entre servicios
-- 📦 Gestión de dependencias con `uv` (más rápido que pip)
+- 📦 Gestión de dependencias con `uv` (más rápido y eficiente que pip)
 - 🚀 API REST con FastAPI para inferencias
 - 📓 JupyterLab para desarrollo y entrenamiento
 - 🐳 Completamente containerizado con Docker
@@ -105,16 +105,3 @@ El proyecto utiliza Docker Compose para orquestar los servicios:
 - [uv](https://github.com/astral-sh/uv)
 - [Python 3.10](https://www.python.org/)
 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## 🤝 Contribuir
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerencias.
-
-1. Fork el proyecto
-2. Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request

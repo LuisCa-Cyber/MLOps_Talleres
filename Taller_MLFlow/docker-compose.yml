@@ -55,6 +55,10 @@ services:
       - "8888:8888"
     volumes:
       - ./notebooks:/home/jovyan/work
+    environment:
+      - MLFLOW_S3_ENDPOINT_URL=http://10.43.101.173:9000
+      - AWS_ACCESS_KEY_ID=admin
+      - AWS_SECRET_ACCESS_KEY=supersecret
 
 volumes:
   mysql_data:

@@ -55,7 +55,7 @@ docker compose up -d
 
 --------------------------------------------------
 ## 📁 Estructura del Proyecto
-
+```
 Taller_MLFlow/
 ├── docker-compose.yml        # Orquestación de servicios (MySQL, MinIO, FastAPI, JupyterLab)
 ├── mlflow_serv.service       # (Opcional) Archivo systemd para iniciar MLflow Server
@@ -70,7 +70,7 @@ Taller_MLFlow/
  ├── Dockerfile            # Dockerfile para la API FastAPI
  ├── requirements.txt      # Dependencias para inferencia (FastAPI)
  └── app.py                # Código principal de la API
-
+```
 --------------------------------------------------
 ## 🔧 Configuración
 

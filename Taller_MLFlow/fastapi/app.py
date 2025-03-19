@@ -23,10 +23,10 @@ def promote_models():
     
     # Diccionario de modelos y versiones a promocionar
     models_to_promote = {
-        "random_forest": 1,        # Ajusta el número de versión
-        "decision_tree": 1,        # Ajusta el número de versión
-        "svm": 1,                  # Ajusta el número de versión
-        "logistic_regression": 1   # Ajusta el número de versión
+        "random_forest": 29,        # Ajusta el número de versión
+        "decision_tree": 24,        # Ajusta el número de versión
+        "svm": 25,                  # Ajusta el número de versión
+        "logistic_regression": 22   # Ajusta el número de versión
     }
     
     for model_name, version in models_to_promote.items():

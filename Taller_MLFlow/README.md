@@ -7,8 +7,7 @@
 [![Docker](https://img.shields.io/badge/Docker-24.0+-blue.svg)](https://www.docker.com/)  
 [![uv](https://img.shields.io/badge/uv-package%20installer-purple.svg)](https://github.com/astral-sh/uv)
 
-# Nota importante: 
-Este proyecto se encuentra desplegado en la MV 10.43.101.173
+# Nota importante: Este proyecto se encuentra desplegado en la MV 10.43.101.173
 
 
 Este proyecto implementa un entorno containerizado para entrenar modelos de Machine Learning y desplegar una API de inferencia. Se utiliza FastAPI para exponer un servicio REST que carga y sirve modelos registrados en MLflow. Además, se dispone de un entorno de JupyterLab para el entrenamiento y experimentación, y se emplea MinIO como sistema de almacenamiento de artefactos.

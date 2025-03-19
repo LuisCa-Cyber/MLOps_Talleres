@@ -1,5 +1,5 @@
 --------------------------------------------------
-# 🐳 Pipeline de Entrenamiento e Inferencia en ML con Docker
+# 🐳 Pipeline de MLflow y MinIO: Entrenamiento e Inferencia de Modelos en ML con Docker
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)  
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)  

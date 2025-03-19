@@ -27,14 +27,6 @@ El proyecto consta de los siguientes servicios:
 
 Los servicios se comunican mediante volúmenes y puertos expuestos para simular un entorno de producción.
 
-Diagrama (mermaid):
---------------------------------------------------
-graph LR
-  A[JupyterLab] -->|Entrena y registra modelos| B[MLflow]
-  B -->|Guarda artefactos| C[MinIO]
-  D[FastAPI] -->|Carga modelos desde MLflow| B
-  E[Cliente] -->|Solicita inferencia| D
---------------------------------------------------
 
 ## ✨ Características
 
@@ -50,14 +42,10 @@ graph LR
 1. Clonar el repositorio:
 git clone https://github.com/LuisCa-Cyber/MLOps_Talleres.git cd MLOps_Talleres/Taller_MLFlow
 
-markdown
-Copiar código
 
 2. Iniciar los servicios:
 docker compose up -d
 
-yaml
-Copiar código
 
 3. Acceder a los servicios:
 - JupyterLab: http://localhost:8080
@@ -133,16 +121,9 @@ El proyecto utiliza Docker Compose para gestionar los servicios:
 Archivo: requirements_jupyterlab.txt
 pandas numpy matplotlib seaborn scikit-learn mlflow sqlalchemy pymysql uvicorn jupyterlab boto3
 
-makefile
-Copiar código
-
 ### FastAPI (inferencia)
 Archivo: requirements_fastapi.txt
 mlflow pymysql scikit-learn==1.6.1 pandas fastapi uvicorn numpy==2.2.4 joblib dill boto3 psutil==7.0.0
-
-markdown
-Copiar código
-*Nota:* Asegúrate de que las versiones fijas sean compatibles con el entorno en el que se registraron los modelos.
 
 --------------------------------------------------
 ## 🚀 Pruebas de la API

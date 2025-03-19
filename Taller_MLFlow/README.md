@@ -8,8 +8,7 @@
 [![uv](https://img.shields.io/badge/uv-package%20installer-purple.svg)](https://github.com/astral-sh/uv)
 
 # Nota importante: 
-
-## Este proyecto se encuentra desplegado en la MV 10.43.101.173
+Este proyecto se encuentra desplegado en la MV 10.43.101.173
 
 
 Este proyecto implementa un entorno containerizado para entrenar modelos de Machine Learning y desplegar una API de inferencia. Se utiliza FastAPI para exponer un servicio REST que carga y sirve modelos registrados en MLflow. Además, se dispone de un entorno de JupyterLab para el entrenamiento y experimentación, y se emplea MinIO como sistema de almacenamiento de artefactos.
@@ -69,7 +68,7 @@ Taller_MLFlow/
  ├── requirements.txt      # Dependencias para inferencia (FastAPI)
  └── app.py                # Código principal de la API
 ├── docker-compose.yml        # Orquestación de servicios (MySQL, MinIO, FastAPI, JupyterLab)
-├── mlflow_serv.service       # (Opcional) Archivo systemd para iniciar MLflow Server
+├── mlflow_serv.service       # Archivo systemd para iniciar MLflow Server
 
 ```
 --------------------------------------------------
